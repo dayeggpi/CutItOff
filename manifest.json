@@ -1,7 +1,8 @@
 {
   "name": "Cut It Off",
   "short_name": "Cut It Off",
-  "start_url": "/",
+  "start_url": "/cutitoff/",
+  "scope": "/cutitoff/",
   "display": "standalone",
   "background_color": "#fafafa",
   "theme_color": "#fafafa",
