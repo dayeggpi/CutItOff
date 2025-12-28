@@ -15,9 +15,9 @@ A lightweight, single-file URL shortener with API support, admin panel, and meta
 
 ## Setup
 
-1. Upload `index.php` to your web server
-2. Make sure PHP has write permissions to the directory
-3. Access the file in your browser
+1. Upload `index.php` and `rename.htaccess` to your web server
+2. Make sure PHP has write permissions to the directory and rename `rename.htaccess` to `.htaccess`
+3. Access `index.php` in your browser
 4. On first run, a `config.json` file is created with your API token
 
 ### Configuration
