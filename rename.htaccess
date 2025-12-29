@@ -2,3 +2,21 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)$ index.php/$1 [L,QSA]
+
+
+## remove everything below if you place the json files out of public folder (one level up), in index.php e.g. : 
+## define('DATA_FILE', __DIR__ . '/../secured_folder/urls.json');
+## define('CONFIG_FILE', __DIR__ . '/../secured_folder/config.json');
+
+<FilesMatch "\.json$">
+    # Apache 2.4
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    
+    # Apache 2.2
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
