@@ -9,9 +9,10 @@ A lightweight, single-file URL shortener with API support, admin panel, and meta
 - **API with rate limiting** - Token-based authentication
 - **Custom short codes** - Optional user-defined slugs
 - **Metadata support** - Add title/description to remember links
-- **Overwrite protection** - Configurable protection for existing codes
+- **Overwrite protection** - Configurable protection for existing codes (to keep the shortcode but update long URLs as needed)
 - **Admin panel** - Manage all URLs from a web interface
 - **Click tracking** - Basic analytics for each link
+- **QR code generation** - A QR code is generated to point to the generate short URL
 
 ## Setup
 
