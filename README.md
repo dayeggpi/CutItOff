@@ -58,11 +58,13 @@ Access the main page to shorten URLs via the web form. Advanced options include:
 
 ## Admin Panel
 
-Access `/admin` to:
+Access `/admin` (or whatever is set in your config.json to:
 - View all shortened URLs
 - Edit title/description
 - Delete URLs
-- Copy your API token
+- Copy/Regenerate your API token
+- Edit the `rate_limit_requests` and `rate_limit_window` values
+- See the API doc
 
 **Note:** Set `admin_password` in `config.json` to enable the admin panel.
 
