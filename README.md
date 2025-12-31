@@ -34,20 +34,20 @@ Edit `config.json` to customize:
     "admin_path": "admin",
     "admin_show_link": true,
 	"admin_password" : "your-secure-password",
-	"recaptcha_site_key" : "your_site_key",
-	"recaptcha_secret_key" : "your_secret_key"
+	"login_max_attempts" : 3,
+	"login_lockout_window" : 3600
 }
 ```
 
 
 - `api_token`: Auto-generated on first run. Use this in API requests. Can generate a new one from admin panel (careful, as old one will be lost)
-- `rate_limit_requests`: Maximum API requests per window (default: 60). Can edit it from admin panel.
-- `rate_limit_window`: Time window in seconds (default: 3600 = 1 hour). Can edit it from admin panel.
+- `rate_limit_requests`: Maximum API and frontend form requests per window (default: 60). Can edit it from admin panel.
+- `rate_limit_window`: Time window in seconds (default: 3600 = 1 hour) for `rate_limit_requests`. Can edit it from admin panel.
 - `admin_path`: Path to access the admin panel (`admin` by default, therefore accessible at /admin). NOT editable from admin panel.
 - `admin_show_link`: Option to show the link to admin panel from homepage. NOT editable from admin panel.
 - `admin_password`: Set this to enable the admin panel. NOT editable from admin panel.
-- `recaptcha_site_key`: Empty by default. Fill in (pair with `recaptcha_secret_key`) to enable ReCaptcha on login page. NOT editable from admin panel.
-- `recaptcha_secret_key`: Empty by default. Fill in (pair with `recaptcha_site_key`) to enable ReCaptcha on login page. NOT editable from admin panel.
+- `login_max_attempts`: Maximum failed login attemps allowed. NOT editable from admin panel.
+- `login_lockout_window`: Time window in seconds (default: 3600 = 1 hour) to lockout login after `login_max_attempts` is reached. NOT editable from admin panel.
 
 ## Web Interface
 
